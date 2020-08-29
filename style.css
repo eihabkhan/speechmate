@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: rgb(37, 64, 121);
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 1.24rem;
+}
+
+.btn {
+  cursor: pointer;
+  background: rgb(39, 123, 219);
+  color: #fff;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: transform 0.3s;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus,
+select:focus {
+  outline: none;
+}
+
+.btn-toggle {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.btn-toggle i {
+  margin-right: 0.5rem;
+}
+
+.textbox {
+  width: 70%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -800px);
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.textbox select {
+  background: rgb(39, 123, 219);
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  height: 2rem;
+  width: 100%;
+}
+
+.textbox textarea {
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+  height: 150px;
+  padding: 0.5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
+.close {
+  float: right;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4rem;
+}
+
+.box {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px rgb(39, 123, 219);
+}
+
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.box .info {
+  background: rgb(39, 123, 219);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.75rem;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
